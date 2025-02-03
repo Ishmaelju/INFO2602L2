@@ -19,6 +19,12 @@ class User(db.Model):
     self.email = email
     self.set_password(password)
 
+    def create_todo(self, text):
+       new_todo= Todo(text)
+       self.todo.append(new_todo)
+       return new_todo
+    
+       
 
   def set_password(self, password):
     """Create hashed password."""
